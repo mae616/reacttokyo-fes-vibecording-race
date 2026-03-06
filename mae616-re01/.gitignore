@@ -1,0 +1,27 @@
+node_modules
+dist
+
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# セッション一時ファイル
+.claude/session-context.md
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.sw?
+
+# Prisma
+backend/generated/prisma
+backend/*.db
+backend/*.db-journal
+
+# Logs
+*.log
