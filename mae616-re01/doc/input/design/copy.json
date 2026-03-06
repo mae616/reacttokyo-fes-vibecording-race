@@ -1,0 +1,61 @@
+{
+  "meta": { "version": 1, "source": "pencil", "file": "doc/input/design/x-sns-design.pen" },
+  "defaultLocale": "ja-JP",
+  "locales": {
+    "ja-JP": {
+      "copy": {
+        "shared.appName": "つぶやき",
+        "shared.nav.home": "ホーム",
+        "shared.nav.users": "ユーザー",
+        "shared.nav.profile": "プロフィール",
+        "shared.followBtn.follow": "フォロー",
+        "shared.followBtn.following": "フォロー中",
+
+        "timeline.header.title": "ホーム",
+        "timeline.compose.placeholder": "いまどうしてる？",
+        "timeline.compose.submit": "投稿する",
+        "timeline.tweet1.name": "田中太郎",
+        "timeline.tweet1.handle": "@tanaka",
+        "timeline.tweet1.time": "・2時間",
+        "timeline.tweet1.body": "React Tokyo Fesに参加してきました！とても勉強になりました。次回も楽しみです 🎉",
+        "timeline.tweet2.name": "佐藤花子",
+        "timeline.tweet2.handle": "@sato_hanako",
+        "timeline.tweet2.time": "・5時間",
+        "timeline.tweet2.body": "TypeScriptとPrismaの組み合わせが最高すぎる。型安全なDB操作は一度体験すると戻れない。",
+        "timeline.tweet3.name": "鈴木一郎",
+        "timeline.tweet3.handle": "@suzuki",
+        "timeline.tweet3.time": "・8時間",
+        "timeline.tweet3.body": "Viteのビルド速度にはいつも驚かされます。HMRも爆速で開発体験が全然違う。",
+
+        "userList.header.title": "ユーザー",
+        "userList.user1.name": "田中太郎",
+        "userList.user1.handle": "@tanaka",
+        "userList.user2.name": "佐藤花子",
+        "userList.user2.handle": "@sato_hanako",
+        "userList.user3.name": "鈴木一郎",
+        "userList.user3.handle": "@suzuki",
+        "userList.user4.name": "山田次郎",
+        "userList.user4.handle": "@yamada_jiro",
+        "userList.user5.name": "高橋美咲",
+        "userList.user5.handle": "@takahashi_m",
+
+        "profile.header.title": "田中太郎",
+        "profile.info.name": "田中太郎",
+        "profile.info.handle": "@tanaka",
+        "profile.stats.followingNum": "12",
+        "profile.stats.followingLabel": "フォロー中",
+        "profile.stats.followerNum": "8",
+        "profile.stats.followerLabel": "フォロワー",
+        "profile.tab.posts": "投稿",
+        "profile.tweet1.name": "田中太郎",
+        "profile.tweet1.handle": "@tanaka",
+        "profile.tweet1.time": "・2時間",
+        "profile.tweet1.body": "React Tokyo Fesに参加してきました！とても勉強になりました。次回も楽しみです 🎉",
+        "profile.tweet2.name": "田中太郎",
+        "profile.tweet2.handle": "@tanaka",
+        "profile.tweet2.time": "・1日前",
+        "profile.tweet2.body": "新しいプロジェクトを始めました。Vite + React + TypeScriptの構成で開発していきます！"
+      }
+    }
+  }
+}

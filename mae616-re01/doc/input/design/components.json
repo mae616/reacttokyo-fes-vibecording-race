@@ -1,0 +1,356 @@
+{
+  "meta": { "version": 1, "source": "pencil", "file": "doc/input/design/x-sns-design.pen" },
+  "components": [
+    {
+      "name": "NavItem",
+      "description": "サイドバーのナビゲーション項目。active/default状態でスタイルが切り替わる",
+      "pencilIds": { "active": "4rzvN", "default": "4CY6f" },
+      "variants": {
+        "state": ["default", "active"]
+      },
+      "defaults": { "state": "default" },
+      "slots": ["navIcon", "navLabel"],
+      "styles": {
+        "state:default": {
+          "backgroundColorRef": null,
+          "textColorRef": "semantic.color.text.secondary",
+          "iconColorRef": "semantic.color.text.secondary",
+          "fontWeightRef": "primitives.font.weight.normal"
+        },
+        "state:active": {
+          "backgroundColorRef": "semantic.color.surface.activeNav",
+          "textColorRef": "semantic.color.text.primary",
+          "iconColorRef": "semantic.color.text.primary",
+          "fontWeightRef": "primitives.font.weight.bold"
+        },
+        "radiusRef": "primitives.radius.full",
+        "height": "semantic.layout.navItem.height",
+        "paddingBlock": "primitives.space.5",
+        "paddingInline": "primitives.space.6",
+        "gap": "primitives.space.6",
+        "typographyRef": "semantic.typography.navLabel"
+      },
+      "a11y": {
+        "role": "link",
+        "keyboard": true,
+        "focusVisible": true
+      }
+    },
+    {
+      "name": "Sidebar",
+      "description": "左サイドバー。ロゴ＋ナビゲーション項目を含む共通レイアウト",
+      "pencilId": "UkOax",
+      "variants": {},
+      "defaults": {},
+      "slots": ["logoArea", "navSlot"],
+      "styles": {
+        "backgroundColorRef": "semantic.color.surface.card",
+        "width": "semantic.layout.sidebar.width",
+        "layout": "vertical",
+        "gap": "primitives.space.2",
+        "paddingBlock": "primitives.space.6",
+        "paddingInline": "primitives.space.5"
+      },
+      "children": {
+        "logoArea": {
+          "icon": "bird",
+          "iconColorRef": "semantic.color.brand.primary",
+          "textColorRef": "semantic.color.brand.primary",
+          "typographyRef": "semantic.typography.logo"
+        },
+        "navSlot": {
+          "items": ["home", "users", "profile"],
+          "componentRef": "NavItem"
+        }
+      },
+      "a11y": {
+        "role": "navigation",
+        "landmark": true
+      }
+    },
+    {
+      "name": "TweetCard",
+      "description": "ツイート/投稿表示カード。アバター＋ヘッダー（名前/ハンドル/時間）＋本文",
+      "pencilId": "kCYwq",
+      "variants": {},
+      "defaults": {},
+      "slots": ["avatar", "userName", "userHandle", "timeAgo", "body"],
+      "styles": {
+        "layout": "horizontal",
+        "gap": "primitives.space.5",
+        "paddingBlock": "primitives.space.5",
+        "paddingInline": "primitives.space.6",
+        "border": {
+          "colorRef": "semantic.color.border.default",
+          "widthRef": "primitives.border.width.1",
+          "styleRef": "primitives.border.style.solid",
+          "alignRef": "primitives.border.align.inside",
+          "sides": ["bottom"]
+        },
+        "avatar": {
+          "size": "semantic.layout.avatar.sm",
+          "shape": "circle"
+        },
+        "header": {
+          "layout": "horizontal",
+          "gap": "primitives.space.3",
+          "alignItems": "center"
+        },
+        "userName": {
+          "typographyRef": "semantic.typography.userName",
+          "colorRef": "semantic.color.text.primary"
+        },
+        "userHandle": {
+          "typographyRef": "semantic.typography.userHandle",
+          "colorRef": "semantic.color.text.secondary"
+        },
+        "timeAgo": {
+          "typographyRef": "semantic.typography.userHandle",
+          "colorRef": "semantic.color.text.secondary"
+        },
+        "body": {
+          "typographyRef": "semantic.typography.tweetBody",
+          "colorRef": "semantic.color.text.primary"
+        }
+      },
+      "a11y": {
+        "role": "article",
+        "keyboard": true
+      }
+    },
+    {
+      "name": "UserRow",
+      "description": "ユーザー一覧の行。アバター＋ユーザー情報＋フォローボタン",
+      "pencilId": "JeuZm",
+      "variants": {
+        "state": ["default", "following", "self"]
+      },
+      "defaults": { "state": "default" },
+      "slots": ["avatar", "userName", "userHandle", "followBtn"],
+      "styles": {
+        "layout": "horizontal",
+        "gap": "primitives.space.5",
+        "paddingBlock": "primitives.space.5",
+        "paddingInline": "primitives.space.6",
+        "alignItems": "center",
+        "border": {
+          "colorRef": "semantic.color.border.default",
+          "widthRef": "primitives.border.width.1",
+          "styleRef": "primitives.border.style.solid",
+          "alignRef": "primitives.border.align.inside",
+          "sides": ["bottom"]
+        },
+        "avatar": {
+          "size": "semantic.layout.avatar.md",
+          "shape": "circle"
+        },
+        "info": {
+          "layout": "vertical",
+          "gap": "primitives.space.1"
+        },
+        "userName": {
+          "typographyRef": "semantic.typography.userName",
+          "colorRef": "semantic.color.text.primary"
+        },
+        "userHandle": {
+          "fontSizeRef": "primitives.font.size.sm",
+          "colorRef": "semantic.color.text.secondary"
+        },
+        "followBtn": {
+          "state:default": {
+            "backgroundColorRef": "semantic.color.button.primaryBg",
+            "textColorRef": "semantic.color.button.primaryText",
+            "copyKey": "shared.followBtn.follow"
+          },
+          "state:following": {
+            "backgroundColorRef": null,
+            "border": {
+              "colorRef": "semantic.color.border.dark",
+              "widthRef": "primitives.border.width.1"
+            },
+            "textColorRef": "semantic.color.button.outlineText",
+            "copyKey": "shared.followBtn.following"
+          },
+          "state:self": {
+            "enabled": false
+          },
+          "radiusRef": "primitives.radius.full",
+          "width": "semantic.layout.followButton.width",
+          "height": "semantic.layout.followButton.height",
+          "typographyRef": "semantic.typography.buttonLabelSm"
+        }
+      },
+      "a11y": {
+        "role": "listitem",
+        "keyboard": true,
+        "focusVisible": true,
+        "followBtn": {
+          "role": "button",
+          "ariaPressed": "state:following → true, state:default → false"
+        }
+      }
+    },
+    {
+      "name": "ComposeArea",
+      "description": "投稿入力エリア。アバター＋テキスト入力＋投稿ボタン",
+      "pencilId": "PryWx",
+      "variants": {},
+      "defaults": {},
+      "slots": ["avatar", "input", "submitBtn"],
+      "styles": {
+        "layout": "horizontal",
+        "gap": "primitives.space.5",
+        "paddingBlock": "primitives.space.5",
+        "paddingInline": "primitives.space.6",
+        "height": "semantic.layout.composeArea.height",
+        "border": {
+          "colorRef": "semantic.color.border.default",
+          "widthRef": "primitives.border.width.1",
+          "sides": ["bottom"]
+        },
+        "avatar": {
+          "size": "semantic.layout.avatar.sm",
+          "shape": "circle",
+          "colorRef": "semantic.color.brand.light"
+        },
+        "input": {
+          "typographyRef": "semantic.typography.composePlaceholder",
+          "placeholderColorRef": "semantic.color.text.tertiary"
+        },
+        "submitBtn": {
+          "backgroundColorRef": "semantic.color.brand.primary",
+          "textColorRef": "semantic.color.text.inverse",
+          "radiusRef": "primitives.radius.full",
+          "width": "semantic.layout.composeButton.width",
+          "height": "semantic.layout.composeButton.height",
+          "typographyRef": "semantic.typography.buttonLabel"
+        }
+      },
+      "a11y": {
+        "input": {
+          "role": "textbox",
+          "ariaLabel": "投稿内容を入力"
+        },
+        "submitBtn": {
+          "role": "button",
+          "keyboard": true
+        }
+      }
+    },
+    {
+      "name": "PageHeader",
+      "description": "画面上部のヘッダー。タイトルと任意の戻るボタンを含む",
+      "pencilIds": { "timeline": "uihsb", "userList": "65dja", "profile": "6b421" },
+      "variants": {
+        "variant": ["default", "withBack"]
+      },
+      "defaults": { "variant": "default" },
+      "slots": ["backIcon", "title"],
+      "styles": {
+        "layout": "horizontal",
+        "gap": "primitives.space.3",
+        "alignItems": "center",
+        "height": "semantic.layout.header.height",
+        "paddingInline": "primitives.space.6",
+        "border": {
+          "colorRef": "semantic.color.border.default",
+          "widthRef": "primitives.border.width.1",
+          "sides": ["bottom"]
+        },
+        "title": {
+          "typographyRef": "semantic.typography.pageTitle",
+          "colorRef": "semantic.color.text.primary"
+        },
+        "backIcon": {
+          "variant:withBack": { "enabled": true, "icon": "arrow-left", "size": "20px" },
+          "variant:default": { "enabled": false }
+        }
+      },
+      "a11y": {
+        "backIcon": {
+          "role": "button",
+          "ariaLabel": "戻る",
+          "keyboard": true
+        }
+      }
+    },
+    {
+      "name": "ProfileInfo",
+      "description": "プロフィール情報セクション。カバー画像、アバター、名前、ハンドル、フォロー統計",
+      "pencilIds": { "cover": "bEdAi", "info": "idPuJ" },
+      "variants": {},
+      "defaults": {},
+      "slots": ["coverPhoto", "avatar", "name", "handle", "followingCount", "followerCount"],
+      "styles": {
+        "coverPhoto": {
+          "height": "semantic.layout.coverPhoto.height",
+          "backgroundColorRef": "semantic.color.surface.coverPhoto"
+        },
+        "avatar": {
+          "size": "semantic.layout.avatar.lg",
+          "shape": "circle",
+          "border": {
+            "colorRef": "primitives.color.white",
+            "widthRef": "primitives.border.width.4",
+            "alignRef": "primitives.border.align.outside"
+          },
+          "marginTop": "-40px"
+        },
+        "name": {
+          "typographyRef": "semantic.typography.profileName",
+          "colorRef": "semantic.color.text.primary"
+        },
+        "handle": {
+          "typographyRef": "semantic.typography.userHandle",
+          "colorRef": "semantic.color.text.secondary"
+        },
+        "stats": {
+          "layout": "horizontal",
+          "gap": "primitives.space.7",
+          "number": {
+            "typographyRef": "semantic.typography.statNumber",
+            "colorRef": "semantic.color.text.primary"
+          },
+          "label": {
+            "typographyRef": "semantic.typography.statLabel",
+            "colorRef": "semantic.color.text.secondary"
+          }
+        }
+      }
+    },
+    {
+      "name": "TabBar",
+      "description": "タブバー。投稿タブなど画面内セクション切り替え",
+      "pencilId": "bujXx",
+      "variants": {
+        "state": ["active", "default"]
+      },
+      "defaults": { "state": "active" },
+      "slots": ["label", "indicator"],
+      "styles": {
+        "height": "semantic.layout.header.height",
+        "alignItems": "center",
+        "justifyContent": "center",
+        "border": {
+          "colorRef": "semantic.color.border.default",
+          "widthRef": "primitives.border.width.1",
+          "sides": ["bottom"]
+        },
+        "label": {
+          "typographyRef": "semantic.typography.tabLabel",
+          "colorRef": "semantic.color.text.primary"
+        },
+        "indicator": {
+          "width": "semantic.layout.tabIndicator.width",
+          "height": "semantic.layout.tabIndicator.height",
+          "backgroundColorRef": "semantic.color.brand.primary",
+          "radiusRef": "primitives.radius.sm"
+        }
+      },
+      "a11y": {
+        "role": "tablist",
+        "keyboard": true
+      }
+    }
+  ]
+}

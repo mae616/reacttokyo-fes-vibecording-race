@@ -1,0 +1,259 @@
+{
+  "meta": { "version": 1, "source": "pencil", "file": "doc/input/design/x-sns-design.pen" },
+  "viewport": {
+    "desktop": { "width": 1440, "height": 900 },
+    "mobile": { "width": 390, "height": 844 }
+  },
+  "pages": [
+    {
+      "key": "Timeline",
+      "pencilId": "9qPPe",
+      "frames": [
+        {
+          "key": "Sidebar",
+          "componentRef": "Sidebar",
+          "resizing": { "horizontal": "FIXED", "vertical": "FILL" },
+          "activeNav": "home"
+        },
+        {
+          "key": "MainFeed",
+          "layout": {
+            "type": "autoLayout",
+            "direction": "vertical"
+          },
+          "constraints": { "horizontal": "SCALE", "vertical": "FILL" },
+          "resizing": { "horizontal": "FILL", "vertical": "FILL" },
+          "styles": {
+            "backgroundColorRef": "semantic.color.surface.card",
+            "border": {
+              "colorRef": "semantic.color.border.default",
+              "widthRef": "primitives.border.width.1",
+              "sides": ["left", "right"]
+            }
+          },
+          "nodes": [
+            {
+              "key": "FeedHeader",
+              "componentRef": "PageHeader",
+              "variant": "default",
+              "nodes": [
+                { "key": "FeedTitle", "type": "text", "copyKey": "timeline.header.title" }
+              ]
+            },
+            {
+              "key": "ComposeArea",
+              "componentRef": "ComposeArea",
+              "nodes": [
+                { "key": "ComposePlaceholder", "type": "text", "copyKey": "timeline.compose.placeholder" },
+                { "key": "ComposeSubmitLabel", "type": "text", "copyKey": "timeline.compose.submit" }
+              ]
+            },
+            {
+              "key": "Tweet1",
+              "componentRef": "TweetCard",
+              "nodes": [
+                { "key": "Tweet1Name", "type": "text", "copyKey": "timeline.tweet1.name" },
+                { "key": "Tweet1Handle", "type": "text", "copyKey": "timeline.tweet1.handle" },
+                { "key": "Tweet1Time", "type": "text", "copyKey": "timeline.tweet1.time" },
+                { "key": "Tweet1Body", "type": "text", "copyKey": "timeline.tweet1.body" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#9ED4F5" } }
+            },
+            {
+              "key": "Tweet2",
+              "componentRef": "TweetCard",
+              "nodes": [
+                { "key": "Tweet2Name", "type": "text", "copyKey": "timeline.tweet2.name" },
+                { "key": "Tweet2Handle", "type": "text", "copyKey": "timeline.tweet2.handle" },
+                { "key": "Tweet2Time", "type": "text", "copyKey": "timeline.tweet2.time" },
+                { "key": "Tweet2Body", "type": "text", "copyKey": "timeline.tweet2.body" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#F5C49E" } }
+            },
+            {
+              "key": "Tweet3",
+              "componentRef": "TweetCard",
+              "nodes": [
+                { "key": "Tweet3Name", "type": "text", "copyKey": "timeline.tweet3.name" },
+                { "key": "Tweet3Handle", "type": "text", "copyKey": "timeline.tweet3.handle" },
+                { "key": "Tweet3Time", "type": "text", "copyKey": "timeline.tweet3.time" },
+                { "key": "Tweet3Body", "type": "text", "copyKey": "timeline.tweet3.body" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#B5E6A3" } }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "UserList",
+      "pencilId": "FXlXO",
+      "frames": [
+        {
+          "key": "Sidebar",
+          "componentRef": "Sidebar",
+          "resizing": { "horizontal": "FIXED", "vertical": "FILL" },
+          "activeNav": "users"
+        },
+        {
+          "key": "MainArea",
+          "layout": {
+            "type": "autoLayout",
+            "direction": "vertical"
+          },
+          "constraints": { "horizontal": "SCALE", "vertical": "FILL" },
+          "resizing": { "horizontal": "FILL", "vertical": "FILL" },
+          "styles": {
+            "backgroundColorRef": "semantic.color.surface.card",
+            "border": {
+              "colorRef": "semantic.color.border.default",
+              "widthRef": "primitives.border.width.1",
+              "sides": ["left"]
+            }
+          },
+          "nodes": [
+            {
+              "key": "UserListHeader",
+              "componentRef": "PageHeader",
+              "variant": "default",
+              "nodes": [
+                { "key": "UserListTitle", "type": "text", "copyKey": "userList.header.title" }
+              ]
+            },
+            {
+              "key": "User1",
+              "componentRef": "UserRow",
+              "state": "self",
+              "nodes": [
+                { "key": "User1Name", "type": "text", "copyKey": "userList.user1.name" },
+                { "key": "User1Handle", "type": "text", "copyKey": "userList.user1.handle" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#9ED4F5" } }
+            },
+            {
+              "key": "User2",
+              "componentRef": "UserRow",
+              "state": "default",
+              "nodes": [
+                { "key": "User2Name", "type": "text", "copyKey": "userList.user2.name" },
+                { "key": "User2Handle", "type": "text", "copyKey": "userList.user2.handle" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#F5C49E" } }
+            },
+            {
+              "key": "User3",
+              "componentRef": "UserRow",
+              "state": "following",
+              "nodes": [
+                { "key": "User3Name", "type": "text", "copyKey": "userList.user3.name" },
+                { "key": "User3Handle", "type": "text", "copyKey": "userList.user3.handle" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#B5E6A3" } }
+            },
+            {
+              "key": "User4",
+              "componentRef": "UserRow",
+              "state": "default",
+              "nodes": [
+                { "key": "User4Name", "type": "text", "copyKey": "userList.user4.name" },
+                { "key": "User4Handle", "type": "text", "copyKey": "userList.user4.handle" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#D4A5F5" } }
+            },
+            {
+              "key": "User5",
+              "componentRef": "UserRow",
+              "state": "default",
+              "nodes": [
+                { "key": "User5Name", "type": "text", "copyKey": "userList.user5.name" },
+                { "key": "User5Handle", "type": "text", "copyKey": "userList.user5.handle" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#F5E6A3" } }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Profile",
+      "pencilId": "ecr1m",
+      "frames": [
+        {
+          "key": "Sidebar",
+          "componentRef": "Sidebar",
+          "resizing": { "horizontal": "FIXED", "vertical": "FILL" },
+          "activeNav": "profile"
+        },
+        {
+          "key": "ProfileMain",
+          "layout": {
+            "type": "autoLayout",
+            "direction": "vertical"
+          },
+          "constraints": { "horizontal": "SCALE", "vertical": "FILL" },
+          "resizing": { "horizontal": "FILL", "vertical": "FILL" },
+          "styles": {
+            "backgroundColorRef": "semantic.color.surface.card",
+            "border": {
+              "colorRef": "semantic.color.border.default",
+              "widthRef": "primitives.border.width.1",
+              "sides": ["left"]
+            }
+          },
+          "nodes": [
+            {
+              "key": "ProfileHeader",
+              "componentRef": "PageHeader",
+              "variant": "withBack",
+              "nodes": [
+                { "key": "ProfileHeaderTitle", "type": "text", "copyKey": "profile.header.title" }
+              ]
+            },
+            {
+              "key": "ProfileInfoSection",
+              "componentRef": "ProfileInfo",
+              "nodes": [
+                { "key": "ProfileName", "type": "text", "copyKey": "profile.info.name" },
+                { "key": "ProfileHandle", "type": "text", "copyKey": "profile.info.handle" },
+                { "key": "FollowingNum", "type": "text", "copyKey": "profile.stats.followingNum" },
+                { "key": "FollowingLabel", "type": "text", "copyKey": "profile.stats.followingLabel" },
+                { "key": "FollowerNum", "type": "text", "copyKey": "profile.stats.followerNum" },
+                { "key": "FollowerLabel", "type": "text", "copyKey": "profile.stats.followerLabel" }
+              ]
+            },
+            {
+              "key": "PostsTab",
+              "componentRef": "TabBar",
+              "state": "active",
+              "nodes": [
+                { "key": "PostsTabLabel", "type": "text", "copyKey": "profile.tab.posts" }
+              ]
+            },
+            {
+              "key": "ProfileTweet1",
+              "componentRef": "TweetCard",
+              "nodes": [
+                { "key": "PTweet1Name", "type": "text", "copyKey": "profile.tweet1.name" },
+                { "key": "PTweet1Handle", "type": "text", "copyKey": "profile.tweet1.handle" },
+                { "key": "PTweet1Time", "type": "text", "copyKey": "profile.tweet1.time" },
+                { "key": "PTweet1Body", "type": "text", "copyKey": "profile.tweet1.body" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#9ED4F5" } }
+            },
+            {
+              "key": "ProfileTweet2",
+              "componentRef": "TweetCard",
+              "nodes": [
+                { "key": "PTweet2Name", "type": "text", "copyKey": "profile.tweet2.name" },
+                { "key": "PTweet2Handle", "type": "text", "copyKey": "profile.tweet2.handle" },
+                { "key": "PTweet2Time", "type": "text", "copyKey": "profile.tweet2.time" },
+                { "key": "PTweet2Body", "type": "text", "copyKey": "profile.tweet2.body" }
+              ],
+              "slotOverrides": { "avatar": { "fill": "#9ED4F5" } }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

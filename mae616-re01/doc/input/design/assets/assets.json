@@ -1,0 +1,64 @@
+{
+  "meta": { "version": 1, "source": "pencil", "file": "doc/input/design/x-sns-design.pen" },
+  "baseDir": "public/design-assets",
+  "note": "このプロジェクトではアイコンにlucideを使用しており、画像アセットは不要。アバターはプレースホルダー（色付き円）で表現。ロゴもlucideのbirdアイコンで代替。",
+  "assets": [
+    {
+      "key": "AppLogoIcon",
+      "type": "icon",
+      "preferredFormat": "svg",
+      "status": "css-only",
+      "note": "lucide 'bird' アイコンを使用。画像ファイル不要",
+      "files": [],
+      "usedBy": [
+        { "component": "Sidebar", "slot": "logoArea" }
+      ],
+      "iconLibrary": "lucide",
+      "iconName": "bird"
+    },
+    {
+      "key": "NavHomeIcon",
+      "type": "icon",
+      "preferredFormat": "svg",
+      "status": "css-only",
+      "note": "lucide 'house' アイコンを使用",
+      "files": [],
+      "usedBy": [{ "component": "NavItem", "context": "home" }],
+      "iconLibrary": "lucide",
+      "iconName": "house"
+    },
+    {
+      "key": "NavUsersIcon",
+      "type": "icon",
+      "preferredFormat": "svg",
+      "status": "css-only",
+      "note": "lucide 'users' アイコンを使用",
+      "files": [],
+      "usedBy": [{ "component": "NavItem", "context": "users" }],
+      "iconLibrary": "lucide",
+      "iconName": "users"
+    },
+    {
+      "key": "NavProfileIcon",
+      "type": "icon",
+      "preferredFormat": "svg",
+      "status": "css-only",
+      "note": "lucide 'user' アイコンを使用",
+      "files": [],
+      "usedBy": [{ "component": "NavItem", "context": "profile" }],
+      "iconLibrary": "lucide",
+      "iconName": "user"
+    },
+    {
+      "key": "BackIcon",
+      "type": "icon",
+      "preferredFormat": "svg",
+      "status": "css-only",
+      "note": "lucide 'arrow-left' アイコンを使用",
+      "files": [],
+      "usedBy": [{ "component": "PageHeader", "variant": "withBack" }],
+      "iconLibrary": "lucide",
+      "iconName": "arrow-left"
+    }
+  ]
+}

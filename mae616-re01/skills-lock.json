@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "react": {
+      "source": "mae616/ai-tech-knowledge",
+      "sourceType": "github",
+      "computedHash": "62b7a200789ef59811fe2f0abe0f137c3090afa75422a446e64883f86cb59d1f"
+    },
+    "tailwind": {
+      "source": "mae616/ai-tech-knowledge",
+      "sourceType": "github",
+      "computedHash": "2e63079ba934140361f0a9ee4919001ce855b3db025ff717d80e9fd5d795113e"
+    }
+  }
+}

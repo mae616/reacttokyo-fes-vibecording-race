@@ -1,0 +1,217 @@
+{
+  "meta": { "version": 1, "source": "pencil", "file": "doc/input/design/x-sns-design.pen" },
+  "primitives": {
+    "color": {
+      "white": "#FFFFFF",
+      "black": "#0F1419",
+      "gray": {
+        "50": "#F7F9FA",
+        "100": "#F0F2F5",
+        "200": "#EFF3F4",
+        "300": "#CFD9DE",
+        "500": "#8B98A5",
+        "600": "#536471",
+        "900": "#0F1419"
+      },
+      "blue": {
+        "50": "#E8F5FD",
+        "500": "#1D9BF0",
+        "600": "#1A8CD8"
+      },
+      "red": {
+        "500": "#F4212E"
+      },
+      "avatar": {
+        "sky": "#9ED4F5",
+        "peach": "#F5C49E",
+        "green": "#B5E6A3",
+        "purple": "#D4A5F5",
+        "yellow": "#F5E6A3"
+      }
+    },
+    "border": {
+      "width": { "0": "0px", "1": "1px", "4": "4px" },
+      "style": { "solid": "solid" },
+      "align": { "inside": "inside", "outside": "outside" }
+    },
+    "opacity": { "100": 1, "0": 0 },
+    "space": {
+      "0": "0px",
+      "1": "2px",
+      "2": "4px",
+      "3": "8px",
+      "4": "10px",
+      "5": "12px",
+      "6": "16px",
+      "7": "20px",
+      "8": "24px"
+    },
+    "radius": {
+      "sm": "4px",
+      "md": "8px",
+      "lg": "16px",
+      "full": "9999px"
+    },
+    "font": {
+      "family": { "primary": "Inter" },
+      "size": {
+        "xs": "13px",
+        "sm": "14px",
+        "md": "15px",
+        "lg": "18px",
+        "xl": "20px",
+        "2xl": "22px"
+      },
+      "weight": {
+        "normal": 400,
+        "medium": 500,
+        "bold": 700,
+        "extrabold": 800
+      },
+      "lineHeight": {
+        "tight": 1.0,
+        "normal": 1.4,
+        "relaxed": 1.5
+      }
+    },
+    "breakpoints": {
+      "mobile": "390px",
+      "desktop": "1440px"
+    }
+  },
+  "semantic": {
+    "color": {
+      "text": {
+        "primary": { "ref": "primitives.color.gray.900" },
+        "secondary": { "ref": "primitives.color.gray.600" },
+        "tertiary": { "ref": "primitives.color.gray.500" },
+        "inverse": { "ref": "primitives.color.white" },
+        "brand": { "ref": "primitives.color.blue.500" }
+      },
+      "surface": {
+        "page": { "ref": "primitives.color.gray.50" },
+        "card": { "ref": "primitives.color.white" },
+        "hover": { "ref": "primitives.color.gray.100" },
+        "activeNav": { "ref": "primitives.color.gray.100" },
+        "coverPhoto": { "ref": "primitives.color.blue.50" }
+      },
+      "border": {
+        "default": { "ref": "primitives.color.gray.200" },
+        "dark": { "ref": "primitives.color.gray.300" }
+      },
+      "brand": {
+        "primary": { "ref": "primitives.color.blue.500" },
+        "hover": { "ref": "primitives.color.blue.600" },
+        "light": { "ref": "primitives.color.blue.50" }
+      },
+      "button": {
+        "primaryBg": { "ref": "primitives.color.gray.900" },
+        "primaryText": { "ref": "primitives.color.white" },
+        "accentBg": { "ref": "primitives.color.blue.500" },
+        "accentText": { "ref": "primitives.color.white" },
+        "outlineBorder": { "ref": "primitives.color.gray.300" },
+        "outlineText": { "ref": "primitives.color.gray.900" }
+      },
+      "danger": {
+        "primary": { "ref": "primitives.color.red.500" }
+      }
+    },
+    "space": {
+      "page": { "ref": "primitives.space.6" },
+      "section": { "ref": "primitives.space.5" },
+      "card": { "ref": "primitives.space.5" },
+      "cardHorizontal": { "ref": "primitives.space.6" },
+      "inlineGap": { "ref": "primitives.space.3" },
+      "tightGap": { "ref": "primitives.space.2" },
+      "navGap": { "ref": "primitives.space.2" }
+    },
+    "typography": {
+      "logo": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.2xl",
+        "fontWeightRef": "primitives.font.weight.extrabold"
+      },
+      "pageTitle": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.xl",
+        "fontWeightRef": "primitives.font.weight.bold"
+      },
+      "navLabel": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.xl",
+        "fontWeightRef": "primitives.font.weight.normal"
+      },
+      "navLabelActive": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.xl",
+        "fontWeightRef": "primitives.font.weight.bold"
+      },
+      "userName": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.md",
+        "fontWeightRef": "primitives.font.weight.bold"
+      },
+      "userHandle": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.md",
+        "fontWeightRef": "primitives.font.weight.normal"
+      },
+      "tweetBody": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.md",
+        "fontWeightRef": "primitives.font.weight.normal",
+        "lineHeightRef": "primitives.font.lineHeight.relaxed"
+      },
+      "composePlaceholder": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.lg",
+        "fontWeightRef": "primitives.font.weight.normal"
+      },
+      "buttonLabel": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.md",
+        "fontWeightRef": "primitives.font.weight.bold"
+      },
+      "buttonLabelSm": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.sm",
+        "fontWeightRef": "primitives.font.weight.bold"
+      },
+      "statNumber": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.sm",
+        "fontWeightRef": "primitives.font.weight.bold"
+      },
+      "statLabel": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.sm",
+        "fontWeightRef": "primitives.font.weight.normal"
+      },
+      "profileName": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.xl",
+        "fontWeightRef": "primitives.font.weight.extrabold"
+      },
+      "tabLabel": {
+        "fontFamilyRef": "primitives.font.family.primary",
+        "fontSizeRef": "primitives.font.size.md",
+        "fontWeightRef": "primitives.font.weight.bold"
+      }
+    },
+    "layout": {
+      "sidebar": { "width": "275px" },
+      "header": { "height": "53px" },
+      "composeArea": { "height": "110px" },
+      "coverPhoto": { "height": "150px" },
+      "avatar": {
+        "sm": "40px",
+        "md": "48px",
+        "lg": "80px"
+      },
+      "followButton": { "width": "100px", "height": "36px" },
+      "composeButton": { "width": "90px", "height": "36px" },
+      "navItem": { "height": "48px" },
+      "tabIndicator": { "width": "56px", "height": "4px" }
+    }
+  }
+}
