@@ -1,1 +1,98 @@
 @import "tailwindcss";
+
+@theme {
+  /* === Primitives === */
+  --color-white: #FFFFFF;
+  --color-black: #0F1419;
+  --color-gray-50: #F7F9FA;
+  --color-gray-100: #F0F2F5;
+  --color-gray-200: #EFF3F4;
+  --color-gray-300: #CFD9DE;
+  --color-gray-500: #8B98A5;
+  --color-gray-600: #536471;
+  --color-gray-900: #0F1419;
+  --color-blue-50: #E8F5FD;
+  --color-blue-500: #1D9BF0;
+  --color-blue-600: #1A8CD8;
+  --color-red-500: #F4212E;
+  --color-avatar-sky: #9ED4F5;
+  --color-avatar-peach: #F5C49E;
+  --color-avatar-green: #B5E6A3;
+  --color-avatar-purple: #D4A5F5;
+  --color-avatar-yellow: #F5E6A3;
+
+  /* === Semantic Colors === */
+  --color-text-primary: #0F1419;
+  --color-text-secondary: #536471;
+  --color-text-tertiary: #8B98A5;
+  --color-text-inverse: #FFFFFF;
+  --color-text-brand: #1D9BF0;
+  --color-surface-page: #F7F9FA;
+  --color-surface-card: #FFFFFF;
+  --color-surface-hover: #F0F2F5;
+  --color-surface-active-nav: #F0F2F5;
+  --color-surface-cover-photo: #E8F5FD;
+  --color-border-default: #EFF3F4;
+  --color-border-dark: #CFD9DE;
+  --color-brand-primary: #1D9BF0;
+  --color-brand-hover: #1A8CD8;
+  --color-brand-light: #E8F5FD;
+  --color-btn-primary-bg: #0F1419;
+  --color-btn-primary-text: #FFFFFF;
+  --color-btn-accent-bg: #1D9BF0;
+  --color-btn-accent-text: #FFFFFF;
+  --color-btn-outline-border: #CFD9DE;
+  --color-btn-outline-text: #0F1419;
+  --color-danger-primary: #F4212E;
+
+  /* === Spacing（Tailwind v4のスケールを上書き） === */
+  --spacing-1: 2px;
+  --spacing-2: 4px;
+  --spacing-3: 8px;
+  --spacing-4: 10px;
+  --spacing-5: 12px;
+  --spacing-6: 16px;
+  --spacing-7: 20px;
+  --spacing-8: 24px;
+
+  /* === Border Radius === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* === Font Family === */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* === Font Size（text-xs, text-md 等で使える） === */
+  --font-size-xs: 13px;
+  --font-size-sm: 14px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 22px;
+
+  /* === Layout（カスタムプロパティ） === */
+  --sidebar-width: 275px;
+  --header-height: 53px;
+  --compose-height: 110px;
+  --cover-photo-height: 150px;
+  --avatar-sm: 40px;
+  --avatar-md: 48px;
+  --avatar-lg: 80px;
+  --follow-btn-width: 100px;
+  --follow-btn-height: 36px;
+  --compose-btn-width: 90px;
+  --compose-btn-height: 36px;
+  --nav-item-height: 48px;
+  --tab-indicator-width: 56px;
+  --tab-indicator-height: 4px;
+}
+
+/* ベースリセット */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface-page);
+  color: var(--color-text-primary);
+  margin: 0;
+}
